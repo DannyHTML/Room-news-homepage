@@ -52,7 +52,7 @@ const backgroundTrigger = 50;
 let isBackgroundAdded = false;
 
 window.addEventListener("scroll", () => {
-  const shouldAddBackground = window.scrollY >= backgroundTrigger || window.pageYOffset >= backgroundTrigger;
+  const shouldAddBackground = window.scrollY >= backgroundTrigger;
 
   if (shouldAddBackground && !isBackgroundAdded) {
     header.classList.add("header-background");
