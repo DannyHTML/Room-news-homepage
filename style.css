@@ -1,0 +1,622 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+body {
+  min-height: 100dvh;
+  font-family: "League Spartan", sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  height: 100px;
+  width: 50%;
+  z-index: 1;
+}
+
+/* on scroll header background */
+
+.header-background {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  transition: all 0.5s ease-in;
+  z-index: 1;
+  background-color: lightgrey;
+  height: 50px;
+  border-bottom-left-radius: 40%;
+  opacity: 0.95;
+  .hamburger-menu {
+    transition: all 0.5s ease-in;
+    filter: invert(100%);
+  }
+  .logo {
+    transition: all 0.5s ease-in;
+    filter: invert(100%);
+    transform: translate(-50%);
+  }
+}
+
+.hamburger-menu img {
+  height: 15px;
+  margin-left: 30px;
+}
+
+.hamburger-menu-close {
+  display: none;
+}
+
+.logo {
+  order: 1;
+  transform: translateX(50%);
+  transition: all 0.4s ease-in-out;
+}
+
+.logo:hover {
+  filter: invert(70%);
+}
+
+.nav-links {
+  display: block;
+  display: none;
+}
+
+.slider-container {
+  position: relative;
+  max-width: 400px;
+  height: 360px;
+  overflow: hidden;
+}
+
+.slider-images {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  max-width: 400px;
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.img-1 {
+  position: absolute;
+  background-image: url(images/mobile-image-hero-1.jpg);
+  width: 100%;
+  max-width: 500px;
+  max-height: 360px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  top: 0;
+  bottom: 0;
+}
+
+.img-2 {
+  position: absolute;
+  background-image: url(images/mobile-image-hero-2.jpg);
+  width: 100%;
+  max-width: 500px;
+  max-height: 360px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  top: 0;
+  bottom: 0;
+  left: 100%;
+}
+
+.img-3 {
+  position: absolute;
+  background-image: url(images/mobile-image-hero-3.jpg);
+  width: 100%;
+  max-width: 500px;
+  max-height: 360px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  top: 0;
+  bottom: 0;
+  left: 200%;
+}
+
+.container-btn {
+  display: flex;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.desktop-image {
+  display: none;
+}
+
+.btn-left {
+  background-image: url(images/icon-angle-left.svg);
+  background-repeat: no-repeat;
+  padding: 20px;
+  background-color: black;
+  background-position: center;
+  transition: all 0.15s ease-in;
+}
+
+.btn-right {
+  background-image: url(images/icon-angle-right.svg);
+  background-repeat: no-repeat;
+  padding: 20px;
+  background-color: black;
+  background-position: center;
+  transition: all 0.15s ease-in;
+}
+
+.btn-left:hover,
+.btn-right:hover {
+  opacity: 0.5;
+}
+
+/*? Shop now section */
+
+.shop-container {
+  width: 90%;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.text-wrapper {
+  position: relative;
+  min-width: 290px;
+  max-width: 400px;
+  height: 220px;
+  overflow: hidden;
+}
+
+.text-slider {
+  position: absolute;
+  height: 180px;
+  width: 100%;
+  height: 100%;
+}
+/* shop description img1 */
+
+.shop-description-img1 {
+  position: absolute;
+  margin-bottom: 20px;
+  min-width: 290px;
+  width: 100%;
+  max-width: 400px;
+  max-height: 200px;
+  top: 0;
+  bottom: 0;
+}
+
+.shop-description-img1 h1 {
+  font-size: 3.3rem;
+  margin-bottom: 10px;
+}
+
+.shop-description-img1 p {
+  max-width: 450px;
+  font-size: 1.3rem;
+  opacity: 0.7;
+  line-height: 17px;
+}
+
+/* shop description img2 */
+
+.shop-description-img2 {
+  position: absolute;
+  margin-bottom: 20px;
+  min-width: 290px;
+  position: absolute;
+  margin-bottom: 20px;
+  min-width: 290px;
+  width: 100%;
+  max-width: 400px;
+  max-height: 200px;
+  top: 0;
+  bottom: 0;
+  left: 100%;
+}
+
+.shop-description-img2 h2 {
+  font-size: 3.3rem;
+  margin-bottom: 10px;
+}
+
+.shop-description-img2 p {
+  max-width: 450px;
+  font-size: 1.3rem;
+  opacity: 0.7;
+  line-height: 17px;
+}
+
+/* shop description img3 */
+
+.shop-description-img3 {
+  position: absolute;
+  margin-bottom: 20px;
+  min-width: 290px;
+  width: 100%;
+  max-width: 400px;
+  max-height: 200px;
+  top: 0;
+  bottom: 0;
+  left: 200%;
+}
+
+.shop-description-img3 h2 {
+  font-size: 3.3rem;
+  margin-bottom: 10px;
+}
+
+.shop-description-img3 p {
+  max-width: 450px;
+  font-size: 1.3rem;
+  opacity: 0.7;
+  line-height: 17px;
+}
+
+.shop-link {
+  display: flex;
+  align-items: center;
+  max-width: 450px;
+  margin-top: 10px;
+}
+
+.shop-link h3 {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 7px;
+  word-spacing: 5px;
+  margin-right: 20px;
+}
+
+/*? About our furniture */
+
+.about {
+  display: grid;
+}
+
+.img-dark {
+  background-image: url(images/image-about-dark.jpg);
+  max-width: 420px;
+  height: 180px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.img-light {
+  background-image: url(images/image-about-light.jpg);
+  max-width: 420px;
+  height: 180px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.about-description {
+  width: 90%;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.about-description h3 {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  margin-bottom: 10px;
+}
+
+.about-description p {
+  max-width: 450px;
+  font-size: 1.3rem;
+  opacity: 0.7;
+  line-height: 17px;
+}
+
+/*? footer section */
+
+.footer {
+  margin-top: 10px;
+  height: 20px;
+}
+
+.footer .container {
+  text-align: center;
+}
+
+.footer .container a {
+  color: black;
+  font-size: 1.5rem;
+  font-weight: 600;
+  transition: color 0.2s ease-in-out;
+}
+
+.footer .container a:hover {
+  cursor: pointer;
+  color: lightblue;
+}
+
+.footer p {
+  font-size: 1.3rem;
+}
+
+.container p {
+  margin-bottom: 4px;
+}
+
+@media all and (width > 400px) {
+  .slider-container {
+    max-width: 840px;
+    height: 534px;
+  }
+
+  .slider-images {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    max-width: 840px;
+  }
+
+  .img-1 {
+    position: absolute;
+    background-image: url(images/desktop-image-hero-1.jpg);
+    width: 100%;
+    max-width: 840px;
+    max-height: 534px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 0;
+    bottom: 0;
+  }
+
+  .img-2 {
+    position: absolute;
+    background-image: url(images/desktop-image-hero-2.jpg);
+    width: 100%;
+    max-width: 840px;
+    max-height: 534px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 0;
+    bottom: 0;
+    left: 100%;
+  }
+
+  .img-3 {
+    position: absolute;
+    background-image: url(images/desktop-image-hero-3.jpg);
+    width: 100%;
+    max-width: 840px;
+    max-height: 534px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 0;
+    bottom: 0;
+    left: 200%;
+  }
+}
+
+@media all and (width > 750px) {
+  .menu-nav,
+  .nav-links {
+    display: flex;
+    order: 1;
+    margin-left: 25px;
+  }
+
+  .nav-links {
+    justify-content: flex-start;
+  }
+
+  .nav-links li {
+    margin: 0 10px;
+  }
+
+  .nav-links li a {
+    font-size: 1.8rem;
+    position: relative;
+    transition: color 0.3s ease-in-out;
+  }
+
+  .nav-links li a:hover {
+    color: lightgreen;
+  }
+
+  .nav-links li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 2px;
+    background-color: lightgreen;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+  }
+
+  .nav-links li a:hover::after {
+    transform: scaleX(1);
+  }
+
+  .hamburger-menu {
+    display: none;
+  }
+
+  .logo {
+    transform: translateX(0);
+    margin-left: 50px;
+  }
+
+  .logo img {
+    min-width: 120%;
+  }
+
+  .header {
+    justify-content: start;
+  }
+
+  .header-background {
+    .logo {
+      transform: translate(0%);
+    }
+    .nav-links li a {
+      transition: all 0.5s ease-in-out;
+      margin-left: 60px;
+      color: black;
+      font-size: 2rem;
+      font-weight: 600;
+    }
+  }
+}
+
+@media all and (width > 790px) {
+  /* Grid template image and shop sections */
+
+  body {
+    width: 90%;
+    margin: auto;
+  }
+
+  .slider-shop-wrapper {
+    position: relative;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    max-width: 1250px;
+    margin: auto;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .about {
+    grid-template-columns: 300px 300px;
+    justify-content: center;
+    justify-content: space-between;
+  }
+
+  .about {
+    max-width: 1200px;
+  }
+}
+
+@media all and (width > 1000px) {
+  /* Grid template image and shop sections */
+  body {
+    width: 80%;
+    margin: auto;
+  }
+
+  .slider-shop-wrapper {
+    grid-template-columns: 70% 30%;
+  }
+
+  .btn-left {
+    padding: 30px;
+  }
+
+  .btn-right {
+    padding: 30px;
+  }
+
+  .slider-container {
+    max-width: 100%;
+  }
+
+  .image-section {
+    max-width: 2000px;
+  }
+
+  .slider-images {
+    max-width: 100%;
+  }
+  .img-1 {
+    max-width: 100%;
+  }
+
+  .img-2 {
+    max-width: 100%;
+  }
+
+  .img-3 {
+    max-width: 100%;
+  }
+}
+
+  @media all and (width > 1200px) {
+    .about {
+      grid-template-columns: 300px 1fr 300px;
+      max-width: 1250px;
+    }
+
+    .text-wrapper {
+      height: 265px;
+    }
+
+    .shop-description-img1 h1 {
+      font-size: 3.75rem;
+    }
+
+    .shop-description-img1 p {
+      font-size: 1.6rem;
+    }
+
+    .shop-description-img2 h2 {
+      font-size: 3.75rem;
+    }
+
+    .shop-description-img2 p {
+      font-size: 1.6rem;
+    }
+
+    .shop-description-img3 h2 {
+      font-size: 3.75rem;
+    }
+
+    .shop-description-img3 p {
+      font-size: 1.6rem;
+    }
+
+    .shop-link {
+      margin-top: 20px;
+    }
+
+    .about-description h3 {
+    text-align: center;
+  }
+}
+
+@media all and (width > 1232px) {
+  .about {
+    grid-template-columns: 350px 1fr 350px;
+  }
+  .footer {
+    margin-top: 0px;
+  }
+}
+
