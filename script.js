@@ -30,13 +30,13 @@ nextButton.addEventListener("click", () => {
 });
 
 document.addEventListener("keydown", (event) => {
-  if (event.code === "ArrowLeft") {
+  if (event.code === "ArrowLeft" || event.code === "KeyA") {
     if (imageIndex > 0) {
       slideTo(imageIndex - 1);
     } else {
       slideTo(sliderImages.children.length - 1);
     }
-  } else if (event.code === "ArrowRight") {
+  } else if (event.code === "ArrowRight" || event.code === "KeyD") {
     if (imageIndex < sliderImages.children.length - 1) {
       slideTo(imageIndex + 1);
     } else {
